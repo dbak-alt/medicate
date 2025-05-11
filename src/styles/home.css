@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+
+/* home.css */
+.glossy-text {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(90deg, #ffffff 0%, #bb9df7 30%, #ffffff 60%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s linear infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 200% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
+  }
+  
