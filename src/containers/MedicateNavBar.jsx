@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../styles/home.css'; 
 import DashBoardIcons from "../utilcontainers/DashborardIcons";
+import { Link } from "react-router-dom";
 
 const navButtons = ["Today’s Meds", "Vaccine", "Prescriptions", "Schedule", "Profile"];
 
@@ -60,8 +61,13 @@ const MedicationNavBar = () => {
             isMenuOpen ? "block" : "hidden sm:block"
           }`}
         >
-          {navButtons.map((button, index) => (
+          {
+        
+          navButtons.map((button, index) => (
+            <Link key={index} to={`/${button.replace(/\s+/g, '').toLowerCase()}`} className="text-white hover:text-amber-200">
             <DashBoardIcons key={index} iconName={button} />
+          </Link>
+            
           ))}
         </div>
       </nav>
